@@ -1,14 +1,14 @@
 {
     "builds": [
       {
-        "src": "manage.py",
+        "src": "wsgi.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
-        "src": "/nexlume/website",
-        "dest": "manage.py"
+        "src": "/(.*)",
+        "dest": "wsgi.py"
       }
     ]
   }
