@@ -1,0 +1,164 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Nexlume{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animation CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN (Updated) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Include Animate.css for predefined animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="icon" type="image/x-icon" href="{% static 'images/white.png' %}">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Red+Hat+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/services.css' %}">
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+    <link rel="stylesheet" href="{% static 'css/project_details.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <!-- Nexlume Name Parallel to Hamburger (in mobile/tablet) -->
+            <a class="navbar-brand d-lg-none" href="{% url 'home' %}">
+                <img src="{% static 'images/logo.png' %}" alt="Home">
+            </a>
+
+            <!-- Navbar Toggle (Hamburger) Button aligned to the right -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'projects' %}">PROJECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'services' %}">SERVICES</a>
+                    </li>
+
+                    <li class="nav-item home-logo d-none d-lg-block">
+                        <a class="nav-link" href="{% url 'home' %}">
+                            <img src="{% static 'images/logo.png' %}" alt="Home">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'team' %}">TEAM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact_form' %}">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar section end -->
+
+
+    <!-- Main Content -->
+    <div>
+        {% block content %} {% endblock %}
+    </div>
+
+    <!-- Footer section start -->
+    <footer>
+
+        <div class="top-footer-container">
+
+            <div class="top-footer-logo-col1">
+                <a href="/"> <img src="{% static 'images/logo.png' %}" alt="Logo" width="200" /></a>
+            </div>
+            <div class="top-footer-info-col2">
+
+            </div>
+
+            <div class="top-footer-media-col3">
+                <h6>Follow us</h6>
+                <div class="social-icons-media">
+                    <a href="https://github.com/Nex-Lume" target="_blank" rel="noopener" class="social-icon">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nexlume-85877a347/" target="_blank" rel="noopener" class="social-icon">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nexlume" target="_blank" rel="noopener" class="social-icon">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <div class="bottom-container">
+            <div class="bottom-footer-container">
+                <div class="bottom-col1">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nexlume.co@gmail.com" target="_blank">nexlume.co@gmail.com</a>
+                </div>
+                <div class="bottom-col2">
+                    <span>NexLume&copy;Copyright 2025 All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Include WOW.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', function() {
+            this.classList.toggle('collapsed');
+        });
+    </script>
+
+</body>
+
+</html>

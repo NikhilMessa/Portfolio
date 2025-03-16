@@ -1,0 +1,285 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-image: url('https://dzinr.co.in/wp-content/uploads/2023/07/lines-1.webp');
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+
+.navbar {
+    position: fixed; /* Use 'fixed' if you want it to stay visible on scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(2, 2, 2); /* Semi-transparent background */
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures it stays above other content */
+    margin-bottom: 120px;
+}
+
+.navbar-container {
+    width: 100%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-collapse{
+    background-color: rgba(2, 2, 2,0.3);
+}
+
+.navbar-brand {
+    font-family: "Plus Jakarta Sans", Sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #ffffff;
+}
+/* Mobile view Logo */
+.navbar-brand img{
+    width: 150px;
+    height: 45px; 
+    object-fit: contain
+}
+/* Make navbar items uppercase */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+}
+
+.nav-item {
+    padding: 0.5rem 1rem; /* Added padding for each nav item */
+}
+
+.nav-link {
+    font-family: "Red Hat Display", Sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    text-transform: uppercase;
+    transition: none;
+}
+
+
+.nav-link img{
+    width: 177px;
+     height: 54.1px;
+      object-fit: contain;
+}
+/* Responsive Navbar */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+/* Adjust Hamburger Icon Position */
+.navbar-toggler.ms-auto {
+    margin-left: auto; /* Moves hamburger to the right */
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Hamburger Icon */
+
+.hamburger-icon {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.bar {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.bar:nth-child(1) {
+    top: 5px;
+}
+
+.bar:nth-child(2) {
+    top: 10px;
+}
+
+.bar:nth-child(3) {
+    top: 15px;
+}
+
+/* Toggled State */
+.navbar-toggler.collapsed .bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.navbar-toggler.collapsed .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler.collapsed .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+/* Responsive Design for Footer */
+@media (max-width: 991px) {
+    .footer-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+}
+
+
+
+/* Footer Background Color */
+.footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: 'Red Hat Serif', serif; /* Set font to Red Hat Serif */
+}
+
+/* Top Footer Container */
+.top-footer-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.192);
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    height: 100px;
+    padding: 30px 60px 40px 60px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.top-footer-media-col3 h6{
+     text-align: center;
+     color: hsla(0, 0%, 100%, 0.716);
+     position: relative;
+    bottom: 15px;
+   
+}
+
+.social-icons-media{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    bottom: 20px;
+    outline: none;
+}
+
+/* Social Media Icons */
+.social-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    font-size: 2rem;
+    color: #d3d3d3; /* Light grey color */
+    border: #000;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: #000; /* Black background on hover */
+    color: #fff; /* White icon color */
+    outline: none;
+}
+
+/* Bottom Footer Container */
+.bottom-container {
+    background-color: #000;
+}
+
+/* Bottom Footer Sub-container */
+.bottom-footer-container {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.592);
+    background-color: #000;
+    color: #ffffffc1;
+    padding: 30px 0px 40px 0px;
+    width: 94%;
+    justify-self: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Responsive Styles */
+
+/* Mobile Devices (below 768px) */
+@media (max-width: 767px) {
+    .top-footer-container {
+        padding: 20px;
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Remove fixed height */
+        align-items: center; /* Center items horizontally */
+        gap: 20px;
+    }
+
+    .top-footer-media-col3 {
+        margin-top: 20px;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .bottom-footer-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 20px 10px;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    .social-icons-media{
+        padding-top: 10px;
+    }
+}
+
+/* Tablet Devices (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .top-footer-container {
+        padding: 25px 40px;
+        flex-direction: row; /* Ensure the items are in a row */
+    }
+
+    .bottom-footer-container {
+        padding: 25px 15px;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Large Screens (above 1024px) */
+@media (min-width: 1024px) {
+    .top-footer-container {
+        padding: 30px 60px;
+    }
+
+    .bottom-footer-container {
+        padding: 30px 60px;
+    }
+}

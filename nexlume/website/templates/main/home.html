@@ -1,0 +1,385 @@
+{% extends "main/base.html" %} {% load static %} {% block title %}Home | Nexlume{% endblock %} {% block content %}
+<div class="main">
+    <div class="section-hero">
+        <div class="hero">
+            <div class="hero-text-box">
+                <h1 class="heading-primary">
+                    Where <span class="hero-highlight">Creativity</span>
+                    <span class="second-line">meets technology</span>
+                </h1>
+                <p class="hero-description">
+                    We specialize in Web Development, UI/UX, Logo Design, and App Development—crafting solutions that elevate businesses.
+                </p>
+                <a href="tel:+919004798958" class="btn btn--fill margin-right-btn">Schedule a Call</a>
+                <a href="{% url 'projects' %}" class="btn btn--outline margin-right-btn">Our Works &rarr;</a>
+            </div>
+            <div class="hero-iframe-box">
+                <iframe src="https://my.spline.design/nexbotrobotcharacterconcept-894514321ea07da18df9d2d68525753f/" frameborder="0">
+                </iframe>
+                <div class="spline-overlay"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Infinite Scrolling Logos Section -->
+
+    <section id="infinite-scrolling">
+        <div class="wrapper">
+            <!-- First row (scrolling left) -->
+            <div class="home-item item1">
+                <img src="{% static 'images/Logo/adobe-after-effects.png' %}" alt="Item 1">
+            </div>
+            <div class="home-item item2">
+                <img src="{% static 'images/Logo/adobe-illustrator.png' %}" alt="Item 2">
+            </div>
+            <div class="home-item item3">
+                <img src="{% static 'images/Logo/adobe-media-encoder.png' %}" alt="Item 3">
+            </div>
+            <div class="home-item item4">
+                <img src="{% static 'images/Logo/android.png' %}" alt="Item 4">
+            </div>
+            <div class="home-item item5">
+                <img src="{% static 'images/Logo/angular.png' %}" alt="Item 5">
+            </div>
+            <div class="home-item item6">
+                <img src="{% static 'images/Logo/ASP.png' %}" alt="Item 6">
+            </div>
+            <div class="home-item item7">
+                <img src="{% static 'images/Logo/blender.png' %}" alt="Item 7">
+            </div>
+            <div class="home-item item8">
+                <img src="{% static 'images/Logo/Bootstrap.png' %}" alt="Item 8">
+            </div>
+            <div class="home-item item9">
+                <img src="{% static 'images/Logo/C# copy.png' %}" alt="Item 9">
+            </div>
+            <div class="home-item item10">
+                <img src="{% static 'images/Logo/c++.png' %}" alt="Item 10">
+            </div>
+            <div class="home-item item11">
+                <img src="{% static 'images/Logo/C.png' %}" alt="Item 11">
+            </div>
+            <div class="home-item item12">
+                <img src="{% static 'images/Logo/CSS.png' %}" alt="Item 12">
+            </div>
+            <div class="home-item item13">
+                <img src="{% static 'images/Logo/dart.png' %}" alt="Item 13">
+            </div>
+            <div class="home-item item14">
+                <img src="{% static 'images/Logo/django.png' %}" alt="Item 14">
+            </div>
+            <div class="home-item item15">
+                <img src="{% static 'images/Logo/express.png' %}" alt="Item 15">
+            </div>
+            <div class="home-item item16">
+                <img src="{% static 'images/Logo/figma.png' %}" alt="Item 16">
+            </div>
+            <div class="home-item item17">
+                <img src="{% static 'images/Logo/firebases.png' %}" alt="Item 17">
+            </div>
+            <div class="home-item item18">
+                <img src="{% static 'images/Logo/flask.png' %}" alt="Item 18">
+            </div>
+            <div class="home-item item19">
+                <img src="{% static 'images/Logo/flutter.png' %}" alt="Item 19">
+            </div>
+            <div class="home-item item20">
+                <img src="{% static 'images/Logo/git.png' %}" alt="Item 20">
+            </div>
+        </div>
+
+        <div class="wrapper reverse">
+            <!-- Second row (scrolling right) -->
+            <div class="home-item item1">
+                <img src="{% static 'images/Logo/HTML.png' %}" alt="Item 1">
+            </div>
+            <div class="home-item item2">
+                <img src="{% static 'images/Logo/JAVA.png' %}" alt="Item 2">
+            </div>
+            <div class="home-item item3">
+                <img src="{% static 'images/Logo/JS.png' %}" alt="Item 3">
+            </div>
+            <div class="home-item item4">
+                <img src="{% static 'images/Logo/JSP.png' %}" alt="Item 4">
+            </div>
+            <div class="home-item item5">
+                <img src="{% static 'images/Logo/linux.png' %}" alt="Item 5">
+            </div>
+            <div class="home-item item6">
+                <img src="{% static 'images/Logo/MongoDB.png' %}" alt="Item 6">
+            </div>
+            <div class="home-item item7">
+                <img src="{% static 'images/Logo/Mysql.png' %}" alt="Item 7">
+            </div>
+            <div class="home-item item8">
+                <img src="{% static 'images/Logo/Netlify.png' %}" alt="Item 8">
+            </div>
+            <div class="home-item item9">
+                <img src="{% static 'images/Logo/NodeJS.png' %}" alt="Item 9">
+            </div>
+            <div class="home-item item10">
+                <img src="{% static 'images/Logo/photoshop.png' %}" alt="Item 10">
+            </div>
+            <div class="home-item item11">
+                <img src="{% static 'images/Logo/PHP.png' %}" alt="Item 11">
+            </div>
+            <div class="home-item item12">
+                <img src="{% static 'images/Logo/Premiere PRo.png' %}" alt="Item 12">
+            </div>
+            <div class="home-item item13">
+                <img src="{% static 'images/Logo/python.png' %}" alt="Item 13">
+            </div>
+            <div class="home-item item14">
+                <img src="{% static 'images/Logo/React.png' %}" alt="Item 14">
+            </div>
+            <div class="home-item item15">
+                <img src="{% static 'images/Logo/vs.png' %}" alt="Item 15">
+            </div>
+            <div class="home-item item16">
+                <img src="{% static 'images/Logo/Selenium.png' %}" alt="Item 16">
+            </div>
+            <div class="home-item item17">
+                <img src="{% static 'images/Logo/SQL.png' %}" alt="Item 17">
+            </div>
+            <div class="home-item item18">
+                <img src="{% static 'images/Logo/Typescript.png' %}" alt="Item 18">
+            </div>
+            <div class="home-item item19">
+                <img src="{% static 'images/Logo/wordpress.png' %}" alt="Item 19">
+            </div>
+            <div class="home-item item20">
+                <img src="{% static 'images/Logo/XML.png' %}" alt="Item 20">
+            </div>
+        </div>
+    </section>
+
+    <section class="video-description">
+        <div class="main-desc" id="animatedContent">
+            <p>Empowering brands with cutting-edge web development, design, and digital solutions Nexlume transforms ideas into reality with innovation, precision, and expertise.</p>
+        </div>
+        <div class="video-container">
+            <video class="background-video" autoplay loop muted playsinline>
+                <source src="{% static 'Video/nexlume_video.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Our Projects Section -->
+    <section class="project-section">
+        <div class="projects-heading">
+            <h2>Our Projects</h2>
+            <img src="https://dzinr.co.in/wp-content/uploads/2023/07/Arrow-1-1.svg" alt="Scroll Arrow" class="scroll-arrow">
+        </div>
+
+        <div class="project-card">
+            <h3>SAFARNAMA</h3>
+            <div class="tags">
+                <span>Tours & Travel</span>
+                <span>Logo Design</span>
+            </div>
+            <p>Embark on extraordinary journeys with Safarnama, where every trip is crafted to perfection. From breathtaking landscapes to cultural wonders, we curate seamless itineraries and exclusive experiences tailored for modern explorers. Whether it's
+                a solo adventure, a romantic getaway, or a group expedition, we ensure hassle-free travel, unforgettable memories, and stories worth sharing. Let's turn your travel dreams into reality! 🌍✈</p>
+                <a href="{% url 'project_details' project_name='Safarnama' %}" class="project-button">
+                    More about this project
+                </a>
+            <div class="project-media">
+                <video class="project-video" autoplay loop muted>
+                    <source src="{% static 'Video/Render.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>NEXSHOW</h3>
+            <div class="tags">
+                <span>Movie Booking</span>
+                <span>Logo Design</span>
+            </div>
+            <p>Book your favorite movies effortlessly with NexShow, your one-stop destination for seamless movie ticket booking. Discover the latest blockbusters, explore showtimes, and secure the best seats—all with a few clicks. Whether it's an action-packed
+                thriller, a heartwarming romance, or a family-friendly film, NexShow ensures a hassle-free booking experience. Enjoy the magic of cinema like never before! 🎬🍿</p>
+                <a href="{% url 'project_details' project_name='Nexshow' %}" class="project-button">
+                    More about this project
+                </a>
+            <div class="project-media">
+                <video class="project-video" autoplay loop muted>
+                    <source src="{% static 'Video/Render (4K).mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>STYLORA</h3>
+            <div class="tags">
+                <span>E-commerce</span>
+                <span>Logo Design</span>
+            </div>
+            <p>Step into a world of trendsetting fashion with Stylora, your go-to destination for the latest styles and timeless classics. From chic casuals to elegant formals, we bring you a curated collection of apparel that blends quality, comfort, and
+                sophistication. Shop effortlessly, stay ahead of trends, and express your unique style with Stylora—where fashion meets convenience! 👗🛍</p>
+                <a href="{% url 'project_details' project_name='stylora' %}" class="project-button">
+                    More about this project
+                </a>
+            <div class="project-media">
+                <video class="project-video" autoplay loop muted>
+                    <source src="{% static 'Video/Dynamic Cloth Logo Reveal.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-section">
+        <div class="services-container">
+            <div class="header-service">
+                <h1 class="title-header">Our Innovation Services</h1>
+                <a href="{% url 'services' %}" class="view-all-services">
+                    View all Services <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="services-box">
+                <div class="service-item">
+                    <div class="service-item-link">
+                        <div class="service-item-bg"></div>
+                        <div class="service-item-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <div class="service-item-title">
+                            Logo Designing
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-link">
+                        <div class="service-item-bg"></div>
+                        <div class="service-item-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-item-title">
+                            Video Editing
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-link">
+                        <div class="service-item-bg"></div>
+                        <div class="service-item-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="service-item-title">
+                            Website Development
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-link">
+                        <div class="service-item-bg"></div>
+                        <div class="service-item-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="service-item-title">
+                            Graphic Designing
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-link">
+                        <div class="service-item-bg"></div>
+                        <div class="service-item-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="service-item-title">
+                            Web Designing
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-item-link">
+                        <div class="service-item-bg"></div>
+                        <div class="service-item-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="service-item-title"> App Development </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-section">
+        <!-- Main Content -->
+        <div class="contact-content">
+            <p>Let's Collaborate</p>
+            <h1>
+                Let's Work
+                <div class="home-connect-button-container">
+                    <a href="{% url 'contact_form' %}" class="home-button">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                Together
+            </h1>
+        </div>
+
+        <!-- Decorative Shape -->
+
+
+        <!-- Moving Objects -->
+        <div class="object phone">
+            <img src="{% static 'images/object-image/vecteezy_small-robots-futuristic-marvels-of-artificial-intelligence_24238434.png' %}" alt="Phone" class="object-img" />
+        </div>
+
+        <div class="object tablet">
+            <img src="{% static 'images/object-image/image-from-rawpixel-id-12363052-png.png' %}" alt="Tablet" class="object-img" />
+        </div>
+
+        <div class="object pc">
+            <img src="{% static 'images/object-image/—Pngtree—gaming pc 3d premium design_15834159.png' %}" alt="PC" class="object-img" />
+        </div>
+
+        <div class="object extra-object">
+            <img src="{% static 'images/object-image/—Pngtree—retro fighters defender wireless gamepad_16344292.png' %}" alt="Extra Object" class="object-img" />
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'js/animation.js' %}"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the element to animate
+        const element = document.getElementById('animatedContent');
+
+        // Create an Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // If element is in view
+                if (entry.isIntersecting) {
+                    // Add animation class
+                    element.classList.add('animate__fadeInUp');
+                    // Stop observing after animation triggered
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            // Element is considered "visible" when 20% of it enters the viewport
+            threshold: 0.2,
+            // Root margin can be adjusted to trigger animation earlier/later
+            rootMargin: '0px'
+        });
+
+        // Start observing the element
+        observer.observe(element);
+    });
+</script>
+<!-- Any additional JavaScript specific to this page -->
+{% endblock %}

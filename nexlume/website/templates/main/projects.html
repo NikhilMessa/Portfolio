@@ -1,0 +1,39 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% block title %}NexLume | Portfolio{% endblock %}
+
+{% block content %}
+<main class="project">
+    <section class="project-wrapper">
+        <header class="project-header">
+            <div class="tagline">
+                <span class="tagline-static">Code. Design. Build.</span>
+            </div>
+        </header>
+
+        <div class="project-grid">
+            {% for project in projects %}
+            <article class="project-item">
+                <a href="{% url 'project_details' project.title %}">
+                    <img src="{{ project.image.url }}" alt="{{ project.title }} Project" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <div class="project-tags">
+                            {% if project.category %}
+                            <span class="project-category">{{ project.category }}</span>
+                            {% endif %}
+                            {% if project.project_type %}
+                            <span class="project-type">{{ project.project_type }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}

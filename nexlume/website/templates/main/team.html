@@ -1,0 +1,65 @@
+{% extends "main/base.html" %} {% load static %} {% block title %}Team - Nexlume{% endblock %} {% block content %}
+
+<section id="team" class="team-body">
+    <h1 class="team-container-title">Namaste, We’re the <br> Creators of NexLume.</h1>
+
+    <div class="team-group">
+        <div class="team-group-image">
+            <img src="{% static 'images/group-image.jpg' %}" alt="Team Group" />
+        </div>
+        <div class="team-group-text">
+            <h2>OUR AMAZING TEAM</h2>
+            <p>
+                We are a group of dedicated professionals, committed to delivering the best results. Together, we create innovative solutions and achieve excellence.
+            </p>
+        </div>
+    </div>
+
+    <div id="teams" class="team-main-container">
+        <h2 class="header-team">The People Behind the Vision</h2>
+        <div class="team-container">
+            {% for member in team_members %}
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="{{ member.image.url }}" class="img-{{ forloop.counter }}" alt="{{ member.name }}" />
+                </div>
+                <div class="card-info">
+                    <div class="info-text">
+                        <h3>{{ member.name }}</h3>
+                        <p>{{ member.role }}</p>
+                    </div>
+                    <div class="card-button">
+                        {% if member.linkedin %}
+                        <a href="{{ member.linkedin }}" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Join Us Section -->
+<div class="join-team">
+    <div class="join-container">
+        <h1>Create | Innovate | Transform – with NexLume!</h1>
+        <p class="subtitle">
+            Bring your skills to a team that builds software for the next generation of startups.
+        </p>
+        <form method="POST" class="form-container">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Enter Email Address" class="email-input" required />
+            <button type="submit" class="apply-button">Enroll Now</button>
+        </form>
+        <p class="contact-info">
+            Share your details at
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nexlume.co@gmail.com" target="_blank">nexlume.co@gmail.com</a> and let's build together.
+        </p>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,198 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% block title %}Services - Nexlume{% endblock %}
+
+{% block content %}
+<div class="full-screen-container">
+    <!-- Header -->
+    <div class="header">
+        <h1>Discover Our Expertise</h1>
+        <p>At Nexlume, we pride ourselves on our commitment to <br>
+            <span class="highlight">Excellence, Creativity, and Timely delivery</span><br>
+            Let us help you build a strong online presence<br>
+            that sets your brand apart.
+        </p>
+    </div>
+</div>
+<!-- Header ends -->
+
+<!-- Main Service Sections -->
+
+<section class="main-container">
+    <h2 class="header">What We Offer</h2>
+
+    <div class="item">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-4">
+                        <span class="numb">001</span>
+                    </div>
+                    <div class="col-md-8">
+                        <p>Bespoke websites designed to fit your <br> business with modern features.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-12">
+                        <h2>Website &nbsp;development</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-4">
+                        <span class="numb">002</span>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Web Design</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-8">
+                        <p>Custom website designs that reflect <br> your brand with a modern touch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-4">
+                        <span class="numb">003</span>
+                    </div>
+                    <div class="col-md-8">
+                        <p>Develop intuitive, high-performance Android <br> apps to boost your mobile presence.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-12">
+                        <h2>Android&nbsp; development</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-4">
+                        <span class="numb">004</span>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Logo Design</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-8">
+                        <p>Crafting impactful logos that embody <br> your brand’s identity and vision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs Section -->
+<section class="faqs-pg section-padding">
+    <div class="container">
+        <div class="row lg-marg">
+            <div class="col-lg-5">
+                <div class="fit-img img md-hide">
+                    <img src="{% static 'images/faq.png' %}" alt="FAQs"  class="img-to-animate">
+                </div>
+            </div>
+            <div class="col-lg-7 pt-30 pb-30">
+                <div class="sec-head mb-60">
+                    <h6 class="sub-head mb-15">Questions &amp; Answers</h6>
+                    <h2>Providing clarity on frequently asked questions</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item active">
+                                <h4 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        Why choose Nexlume?
+                                    </button>
+                                </h4>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>With Nexlume, you gain a skilled, multi-disciplinary team specializing in web, software, app development, and branding—delivering top-quality solutions without the cost of full-time hires.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="accordion-item">
+                                <h4 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        How fast can we deliver?
+                                    </button>
+                                </h4>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Websites: 7-14 days, Android Apps: 3-6 weeks, Logos: 2-3 days. We balance speed and quality for exceptional results.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="accordion-item">
+                                <h4 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse3">
+                                        How do you track progress with Nexlume?
+                                    </button>
+                                </h4>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>We provide regular updates via email, project management tools, or scheduled meetings, ensuring full transparency at every stage.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="accordion-item">
+                                <h4 class="accordion-header" id="heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse3">
+                                        How to request a project with Nexlume?
+                                    </button>
+                                </h4>
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Simply contact us via our website or email, share your requirements, and receive a custom proposal and timeline.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Link to JavaScript -->
+<script src="{% static 'js/animation.js' %}"></script>
+
+{% endblock %}

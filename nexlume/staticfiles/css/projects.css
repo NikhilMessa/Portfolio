@@ -1,0 +1,441 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Project section styles */
+.project {
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;
+}
+
+.project::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.project-wrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 60px;
+}
+
+/* Enhanced header and tagline styles */
+.project-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.tagline {
+    display: flex;
+    font-size: 55px;
+    font-weight: 100;
+    font-family: 'Syne', sans-serif;
+    color: white;
+    margin: 0;
+    animation: project-header-h1 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0;
+    justify-content: center;
+}
+
+@keyframes project-header-h1 {
+    0% {
+        transform: translateY(30%);
+        clip-path: inset(100% 0 0 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+}
+
+
+.tagline-dynamic {
+    position: relative;
+    display: inline-block;
+    min-width: 240px;
+    height: 72px;
+}
+
+.tagline-word {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transform: translateY(20px) rotateX(-90deg);
+    transform-origin: top;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.tagline-word.active {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+}
+
+/* Enhanced project grid styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Enhanced project item styles */
+.project-item {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    aspect-ratio: 4/3;
+    background: #1a1a1a;
+    transform-style: preserve-3d;
+}
+
+.project-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-item:hover .project-image {
+    opacity: 0.2;
+    transform: scale(1.08);
+}
+
+/* Enhanced overlay styles */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    background: linear-gradient(
+        -180deg,
+        rgba(110, 110, 110, 0.4) 0%,
+       
+    );
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: translateZ(20px);
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-title {
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    align-self: self-end;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 4px rgba(123, 123, 123, 0.623);
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition-delay: 0.1s;
+    transform: translateX(50px); /* Start off-screen to the right */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Trigger animation when the page loads */
+.animate__fadeInRight {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+
+}
+
+.project-item:hover .project-title {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-tags {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition-delay: 0.2s;
+}
+
+.project-item:hover .project-tags {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-category,
+.project-type {
+    font-size: 0.875rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.project-category:hover,
+.project-type:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Responsive styles remain the same but with enhanced animations */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 1.75rem;
+    }
+    
+    .tagline {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .tagline {
+        font-size: 2rem;
+    }
+    
+    .project-title {
+        font-size: 1.5rem;
+    }
+}
+/* Keep all the existing styles and update/add these responsive styles */
+
+/* Tablet Landscape (1024px and below) */
+@media (max-width: 1024px) {
+    .project-wrapper {
+        max-width: 95%;
+    }
+
+    .project-grid {
+        gap: 2rem;
+        padding: 0.75rem;
+    }
+
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 2.75rem;
+    }
+
+    .project-overlay {
+        padding: 2rem;
+    }
+}
+
+/* Tablet Portrait (768px and below) */
+@media (max-width: 768px) {
+    .project {
+        padding: 1.5rem;
+    }
+
+    .project-header {
+        margin-bottom: 3rem;
+        padding: 2rem 0;
+    }
+
+    .tagline {
+        font-size: 2.25rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tagline-dynamic {
+        min-width: 200px;
+        height: 60px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .project-item {
+        border-radius: 20px;
+    }
+
+    .project-overlay {
+        padding: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.75rem;
+    }
+
+    .project-category,
+    .project-type {
+        font-size: 0.75rem;
+        padding: 0.5rem 1.25rem;
+        letter-spacing: 0.5px;
+    }
+
+    .project-tags {
+        gap: 0.75rem;
+    }
+
+    .project-item:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+}
+
+/* Large Mobile (600px and below) */
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .project {
+        padding: 1rem;
+    }
+
+    .project-header {
+        margin-bottom: 2rem;
+    }
+
+    .tagline {
+        font-size: 2rem;
+    }
+
+    .project-item {
+        aspect-ratio: 16/11;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .project-header {
+        padding: 1.5rem 0;
+    }
+
+    .tagline {
+        font-size: 1.75rem;
+    }
+
+    .tagline-dynamic {
+        min-width: 180px;
+        height: 50px;
+    }
+
+    .project-overlay {
+        padding: 1.25rem;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-category,
+    .project-type {
+        font-size: 0.7rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .project-tags {
+        gap: 0.5rem;
+    }
+}
+
+/* Extra Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .tagline {
+        font-size: 1.5rem;
+    }
+
+    .tagline-dynamic {
+        min-width: 160px;
+        height: 45px;
+    }
+
+    .project-title {
+        font-size: 1.125rem;
+    }
+
+    .project-category,
+    .project-type {
+        font-size: 0.65rem;
+        padding: 0.35rem 0.875rem;
+    }
+
+    .project-overlay {
+        padding: 1rem;
+    }
+}
+
+/* Support for device orientation */
+@media (orientation: landscape) and (max-height: 600px) {
+    .project {
+        padding: 1rem;
+    }
+
+    .project-header {
+        margin-bottom: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .project-item {
+        aspect-ratio: 16/9;
+    }
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

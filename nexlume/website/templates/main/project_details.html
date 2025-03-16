@@ -1,0 +1,59 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% block title %}NexLume | Portfolio{% endblock %}
+
+{% block content %}
+
+<main>
+    <section class="project-header">
+        <div class="banner">
+            <img src="{{ project.image.url }}" alt="{{ project.title }} Banner">
+        </div>
+    </section>
+
+    <section class="client-section">
+        <div class="client-label">Client</div>
+        <h1 class="client-name">{{ details.client_name }}</h1>
+        <div class="client-title">{{ details.description }}</div>
+
+        <div class="project-info">
+            <div class="info-group">
+                <div class="info-label">Project type :</div>
+                <div class="project-types">
+                    <a href="{{ details.website_design }}" class="project-type type-website">
+                         Website
+                    </a>
+                    <span class="project-type type-nocode">{{ details.no_code_development }}</span>
+                </div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">Date :</div>
+                <div>{{ details.date }}</div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">Design team :</div>
+                <div>{{ details.design_team }}</div>
+            </div>
+        </div>
+
+        <div class="objective">
+            <div class="objective-label">Objective:</div>
+            <p class="objective-text">
+                {{ details.objective }}
+            </p>
+        </div>
+    </section>
+
+    <div class="project-body-section">
+        <div class="project-image-body">
+            <img src="{{ details.secondary_image.url }}" alt="Project Image">
+        </div>
+    </div>
+</main>
+
+<script src="{% static 'js/scripts.js' %}"></script>
+{% endblock %}
