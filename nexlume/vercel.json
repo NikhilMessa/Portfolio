@@ -7,7 +7,7 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/nexlume/website",
         "dest": "manage.py"
       }
     ]
