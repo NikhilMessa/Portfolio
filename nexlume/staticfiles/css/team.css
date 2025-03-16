@@ -1,13 +1,14 @@
 /* Google Fonts Import */
+
 @import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;800&display=swap');
 
 /* Main Section Styles */
+
 .team-body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-style: normal;
     background-color: #000;
-    background-image: url('https://dzinr.co.in/wp-content/uploads/2023/07/lines-1.webp');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +20,9 @@
     padding-bottom: 20px;
 }
 
+
 /* Header Section */
+
 .team-container-title {
     text-align: center;
     padding: 40px 20px;
@@ -49,7 +52,9 @@
     }
 }
 
+
 /* Team Group Section */
+
 .team-group {
     flex-direction: column;
     justify-items: center;
@@ -104,7 +109,9 @@
     letter-spacing: 0.5px;
 }
 
+
 /* Team Cards Section */
+
 .header-team {
     text-align: center;
     font-family: 'Syne', sans-serif;
@@ -223,7 +230,7 @@
 
 .card-button:hover {
     transform: scale(1.2);
-    background-color:#9da5e0 ;
+    background-color: #9da5e0;
     color: white;
 }
 
@@ -231,7 +238,9 @@
     color: rgba(3, 53, 255, 0.921);
 }
 
+
 /* Join Team Section */
+
 .join-team {
     background-image: url('/static/images/team-email.jpg');
     background-size: cover;
@@ -304,8 +313,10 @@
 }
 
 .apply-button:hover {
-    background-color: rgba(3, 53, 255, 0.921);
-    transform: scale(1.05);
+    background-color: rgba(0, 102, 255, 0.9);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+    transition: all 0.3s ease-in-out;
 }
 
 .contact-info {
@@ -325,14 +336,15 @@
     text-decoration: underline;
 }
 
+
 /* Responsive Breakpoints */
+
 @media (max-width: 1024px) {
     .team-container {
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
         padding: 20px 40px;
     }
-
     .team-group {
         margin-top: -55px;
         flex-direction: column;
@@ -340,24 +352,19 @@
         padding: 40px 5%;
         gap: 30px;
     }
-
-    .team-group-image, 
+    .team-group-image,
     .team-group-text {
         max-width: 100%;
     }
-
     .team-container-title h1 {
         font-size: 2rem;
     }
-
     .team-group-text h2 {
         font-size: 1.8rem;
     }
-
     .team-group-text p {
         font-size: 1rem;
     }
-
     .team-group-image img {
         height: 250px;
         width: 100%;
@@ -385,31 +392,26 @@
         gap: 23px;
         padding: 10px;
     }
-
     .team-container-title {
         font-size: 30px;
     }
-
     .team-container-title h1 {
         font-size: 14px;
         height: 0px;
         line-height: 50px;
     }
-
     .join-container h1 {
         font-size: 2rem;
     }
-
     .subtitle {
         font-size: 1rem;
     }
-
     .form-container {
         flex-direction: column;
         gap: 15px;
     }
-
-    .email-input, .apply-button {
+    .email-input,
+    .apply-button {
         width: 80%;
         max-width: none;
         align-self: center;
