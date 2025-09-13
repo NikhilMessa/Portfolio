@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-+q-u!xyz-%%&#5t-56)lcfpv=bw1!1ol&wck$2=+3e@pn0uyn_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'nexlume.vercel.app', 'nexlume.com','nexlume-gray.vercel.app','portfolio-1-0xv3.onrender.com']
+ALLOWED_HOSTS = [
+    '.vercel.app',
+    '127.0.0.1',
+    'nexlume.vercel.app',
+    'nexlume.com',
+    'nexlume-gray.vercel.app',
+    'portfolio-1-0xv3.onrender.com',  # ✅ Added Render domain
+]
 
 
 # settings.py
